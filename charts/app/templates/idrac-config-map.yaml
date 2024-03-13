@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: idrac-config
+  labels:
+    name: idrac-config
+data:
+  idrac.yml: |
+  {{- .Values.idracConfig | toYaml | nindent 4 }}
+  
