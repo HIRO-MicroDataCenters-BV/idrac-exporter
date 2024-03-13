@@ -25,7 +25,6 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "app.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -38,14 +37,13 @@ spec:
           - containerPort: 9348
           volumeMounts:
           - name: idrac-config
-            mountPath: /etc/prometheus/idrac.yml
-            subPath: idrac-config.yml
-          volumes:
-          - name: idrac-config
-            configMap:
-            name: idrac-config
+            mountPath: /etc/prometheus
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: idrac-config
+          configMap:
+            name: idrac-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
