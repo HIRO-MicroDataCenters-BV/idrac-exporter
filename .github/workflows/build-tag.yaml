@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:    
     - name: Set version
-      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
 
     - name: Checkout
       uses: actions/checkout@v4
@@ -21,6 +21,8 @@ jobs:
 
     - name: Publish Release Helm charts
       uses: stefanprodan/helm-gh-pages@master
+      env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.RELEASE_VERSION }}
       with:
         token: ${{ github.token }}
         charts_dir: "./charts"
