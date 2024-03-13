@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  idrac-exporter:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-03-13T12:27:46.327432377Z"
+    description: Idrac exporter service
+    digest: 26396c18ad5d7188f58dddbe171558c0592c6f25d421cefe14b80d174c2006fa
+    name: idrac-exporter
+    type: application
+    urls:
+    - https://HIRO-MicroDataCenters-BV.github.io/idrac-exporter/helm-charts/idrac-exporter-0.0.4.tgz
+    version: 0.0.4
+generated: "2024-03-13T12:27:46.327012817Z"
