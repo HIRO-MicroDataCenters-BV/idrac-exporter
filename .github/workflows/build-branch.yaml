@@ -1,11 +1,9 @@
-name: Build Helm Chart
+name: Build Dev Helm Chart
 
 on:
   push:
     branches:
       - '**'
-    paths-ignore:
-      - 'main'
   workflow_dispatch:
 
 jobs:
