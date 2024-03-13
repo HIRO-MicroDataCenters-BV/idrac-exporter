@@ -24,8 +24,6 @@ jobs:
 
     - name: Publish Release Helm charts
       uses: stefanprodan/helm-gh-pages@master
-      env:
-          RELEASE_VERSION: ${{ steps.version.outputs.RELEASE_VERSION }}
       with:
         token: ${{ github.token }}
         charts_dir: "./charts"
