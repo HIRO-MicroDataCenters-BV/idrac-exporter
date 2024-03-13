@@ -3,12 +3,12 @@ entries:
   idrac-exporter:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2024-03-13T12:03:37.331610019Z"
+    created: "2024-03-13T12:09:21.027039143Z"
     description: Idrac exporter service
-    digest: 371a0cb9cd8c43a4ce726c056dec1a8f12fe30c8bfdc3a0021103b4f2388e0c4
+    digest: 7169c5a13aab306f03866118a1982dc2060abbd20b908d1057d9eb56118e0988
     name: idrac-exporter
     type: application
     urls:
     - https://HIRO-MicroDataCenters-BV.github.io/idrac-exporter/dev/idrac-exporter-1.1.0.tgz
     version: 1.1.0
-generated: "2024-03-13T12:03:37.331173957Z"
+generated: "2024-03-13T12:09:21.026590232Z"
